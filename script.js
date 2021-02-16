@@ -68,8 +68,20 @@ function createBox(item) {
     <img src="${image}" alt="${text}" />
     <p class="info">${text}</p>
   `;
+
+  box.addEventListener('click', () => {
+    setTextMessage(text);
+    speakText();
+
+    box.classList.add('active');
+    setTimeout(() => box.classList.remove('active'), 800);
+  });
+
   main.appendChild(box);
 }
+
+// Initialize speech synth
+const message = new SpeechSynthesisUtterance();
 
 // Store voices
 let voices = [];
@@ -84,6 +96,15 @@ function getVoices() {
     voicesSelect.appendChild(option);
   });
 }
+
+function setTextMessage(text) {
+  message.text = text;
+}
+
+function speakText() {
+  speechSynthesis.speak(message);
+}
+
 // Event Listeners
 
 // Voice change option
