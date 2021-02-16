@@ -53,7 +53,7 @@ const data = [
   },
   {
     image: './img/grandma.jpg',
-    text: 'I Want To Go To Grandma\'s House'
+    text: 'I Want To Go To Grandma\'s'
   }
 ];
 

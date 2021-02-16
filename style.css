@@ -100,7 +100,6 @@ main {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  text-align: center;
   transition: box-shadow 0.2s ease-out;
 }
 
@@ -113,3 +112,15 @@ main {
   object-fit: cover;
   height: 200px;
 }
+
+.box .info {
+  background-color: darksalmon;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
